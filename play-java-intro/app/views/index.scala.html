@@ -1,0 +1,30 @@
+@(persons: List[Person])
+
+@renderPerson(person: Person) = {
+    <li>Name: @person.name</li>
+}
+
+@main("Welcome to Play") {
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
+
+    <h2>People using server side rendering</h2>
+    <ul>
+
+    @for(p <- persons) {
+        @renderPerson(p)
+    }
+
+    </ul>
+
+
+    <h2>People using js</h2>
+    <ul id="persons"></ul>
+
+
+    <h2>Form for adding person</h2>
+
+    <form method="POST" action="@routes.Application.addPerson()">
+        <input type="text" name="name" autofocus/>
+        <button>Add Person</button>
+    </form>
+}
