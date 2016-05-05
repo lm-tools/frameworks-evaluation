@@ -16,3 +16,4 @@ server.pid
 .sbtserver/
 .idea/
 libexec/
+**/.sbtserver
