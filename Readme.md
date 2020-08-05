@@ -1,4 +1,6 @@
-# Short evaluation of frameworks
+# Short evaluation of frameworks - deprecated
+
+*This project is no longer maintained*
 
 Main points to consider:
 - Is it quick to prototype
